@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaAngleRight } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaAngleRight } from 'react-icons/fa';
 import { IoMail, IoCall, IoLocation, IoShieldCheckmark, IoGlobe } from 'react-icons/io5';
 import { motion } from 'framer-motion';
 import Logo from '../atoms/Logo';
@@ -46,15 +46,9 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-3 md:gap-4">
               <a href="#" className="bg-white/10 hover:bg-white/20 p-2 md:p-2.5 rounded-full transition-all">
-                <FaFacebook className="w-3 h-3 md:w-4 md:h-4" />
-              </a>
-              <a href="#" className="bg-white/10 hover:bg-white/20 p-2 md:p-2.5 rounded-full transition-all">
-                <FaTwitter className="w-3 h-3 md:w-4 md:h-4" />
-              </a>
-              <a href="#" className="bg-white/10 hover:bg-white/20 p-2 md:p-2.5 rounded-full transition-all">
                 <FaLinkedin className="w-3 h-3 md:w-4 md:h-4" />
               </a>
-              <a href="#" className="bg-white/10 hover:bg-white/20 p-2 md:p-2.5 rounded-full transition-all">
+              <a href="https://www.instagram.com/simplip2p" className="bg-white/10 hover:bg-white/20 p-2 md:p-2.5 rounded-full transition-all">
                 <FaInstagram className="w-3 h-3 md:w-4 md:h-4" />
               </a>
             </div>
@@ -168,7 +162,7 @@ const Footer = () => {
               >
                 <IoCall className="w-4 h-4 md:w-5 md:h-5 text-blue-400 flex-shrink-0" />
                 <a href="tel:+2341234567890" className="text-slate-300 hover:text-blue-400 transition-colors text-xs md:text-sm">
-                  +234 123 456 7890
+                   07059751272
                 </a>
               </motion.li>
             </ul>
