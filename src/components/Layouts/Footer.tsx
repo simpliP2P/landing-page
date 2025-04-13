@@ -5,6 +5,8 @@ import { IoMail, IoCall, IoLocation, IoShieldCheckmark, IoGlobe } from 'react-ic
 import { motion } from 'framer-motion';
 import Logo from '../atoms/Logo';
 
+
+
 const Footer = () => {
 
   const solutions = [
@@ -45,7 +47,7 @@ const Footer = () => {
               Streamlining procurement processes with intelligent automation, centralized data management, and real-time analytics.
             </p>
             <div className="flex items-center gap-3 md:gap-4">
-              <a href="#" className="bg-white/10 hover:bg-white/20 p-2 md:p-2.5 rounded-full transition-all">
+              <a href="https://www.linkedin.com/company/simplip2p" className="bg-white/10 hover:bg-white/20 p-2 md:p-2.5 rounded-full transition-all">
                 <FaLinkedin className="w-3 h-3 md:w-4 md:h-4" />
               </a>
               <a href="https://www.instagram.com/simplip2p" className="bg-white/10 hover:bg-white/20 p-2 md:p-2.5 rounded-full transition-all">
