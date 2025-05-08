@@ -53,7 +53,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2 justify-center cursor-pointer">
-            <Logo className="h-7 w-auto md:h-9" />
+            <Logo className="h-7 w-auto md:h-9 mt-5" />
             <p className={`text-lg md:text-xl font-bold text-white`}>simpliP2P</p>
           </div>
 
