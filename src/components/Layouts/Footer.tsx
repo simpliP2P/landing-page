@@ -163,8 +163,8 @@ const Footer = () => {
                 className="flex items-center gap-2 md:gap-3"
               >
                 <IoCall className="w-4 h-4 md:w-5 md:h-5 text-blue-400 flex-shrink-0" />
-                <a href="tel:+2341234567890" className="text-slate-300 hover:text-blue-400 transition-colors text-xs md:text-sm">
-                   07059751272
+                <a href="tel:+2347059751272" className="text-slate-300 hover:text-blue-400 transition-colors text-xs md:text-sm">
+                +234 705 975 1272
                 </a>
               </motion.li>
             </ul>
