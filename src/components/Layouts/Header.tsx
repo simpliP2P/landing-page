@@ -52,9 +52,9 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 justify-center cursor-pointer">
             <Logo className="h-7 w-auto md:h-9" />
-            <span className={`text-lg md:text-xl font-bold text-white`}>simpliP2P</span>
+            <p className={`text-lg md:text-xl font-bold text-white`}>simpliP2P</p>
           </div>
 
           {/* Desktop Navigation */}

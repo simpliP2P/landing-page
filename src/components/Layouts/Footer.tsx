@@ -151,8 +151,8 @@ const Footer = () => {
                 className="flex items-center gap-2 md:gap-3"
               >
                 <IoMail className="w-4 h-4 md:w-5 md:h-5 text-blue-400 flex-shrink-0" />
-                <a href="mailto:help@simplip2p.com" className="text-slate-300 hover:text-blue-400 transition-colors text-xs md:text-sm">
-                  help@simplip2p.com
+                <a href="mailto:info@simplip2p.com" className="text-slate-300 hover:text-blue-400 transition-colors text-xs md:text-sm">
+                info@simplip2p.com
                 </a>
               </motion.li>
               <motion.li 
