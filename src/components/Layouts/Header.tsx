@@ -1,8 +1,10 @@
+"use client"
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
+import Link from 'next/link';
 import Button from '../atoms/Button';
 import { motion } from 'framer-motion';
-import { FaChevronDown, FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../atoms/Logo';
 
 // Typography styles
@@ -10,6 +12,7 @@ const navLinkStyles = "font-roboto text-white text-[16px] md:text-[18px]";
 
 const Header = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -52,39 +55,26 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2 justify-center cursor-pointer">
+          <Link href="/" className="flex items-center gap-2 justify-center cursor-pointer">
             <Logo className="h-7 w-auto md:h-9 mt-5" />
             <p className={`text-lg md:text-xl font-bold text-white`}>simpliP2P</p>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-4 lg:gap-8">
-            <div className="relative group">
-              <a href="#features" className={`flex items-center gap-1 hover:text-white transition-colors ${navLinkStyles}`}>
-                <span>Solutions</span>
-                <FaChevronDown className="w-3 h-3 opacity-70 group-hover:opacity-100 transition-opacity" />
-              </a>
-              <div className="absolute left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                {["E-Procurement", "Strategic Sourcing", "Spend Analysis"].map((item, i) => (
-                  <a 
-                    key={i} 
-                    href={`#${item.toLowerCase().replace(' ', '-')}`} 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
-                  >
-                    {item}
-                  </a>
-                ))}
-              </div>
-            </div>
-            
-            {["How it works", "Case studies", "Pricing", "FAQ"].map((item, i) => (
-              <a 
+          <nav className="hidden md:flex items-center gap-8 lg:gap-12">
+            {[
+              { name: "Home", path: "/" },
+              { name: "About", path: "/about" }
+            ].map((item, i) => (
+              <Link 
                 key={i} 
-                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} 
-                className={`hover:text-white transition-colors ${navLinkStyles}`}
+                href={item.path}
+                className={`relative pb-1 hover:text-white transition-colors ${navLinkStyles} ${
+                  pathname === item.path ? 'after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white' : ''
+                }`}
               >
-                {item}
-              </a>
+                {item.name}
+              </Link>
             ))}
           </nav>
 
@@ -120,15 +110,20 @@ const Header = () => {
       >
         <div className="container mx-auto px-4 py-4">
           <nav className="flex flex-col gap-2">
-            {["Solutions", "How it works", "Case studies", "Pricing", "FAQ"].map((item, i) => (
-              <a 
+            {[
+              { name: "Home", path: "/" },
+              { name: "About", path: "/about" }
+            ].map((item, i) => (
+              <Link 
                 key={i}
-                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} 
-                className="text-gray-300 hover:text-white transition-colors py-3 border-b border-gray-700/50"
+                href={item.path}
+                className={`text-gray-300 hover:text-white transition-colors py-3 border-b border-gray-700/50 ${
+                  pathname === item.path ? 'text-white border-b-white' : ''
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                {item}
-              </a>
+                {item.name}
+              </Link>
             ))}
 
             <div className="mt-4">

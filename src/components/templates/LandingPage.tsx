@@ -5,10 +5,8 @@ import { useState, useEffect, ChangeEvent, FormEvent, JSX } from "react";
 import Image from "next/image";
 import { FaCheckCircle, FaChartLine, FaShieldAlt } from 'react-icons/fa';
 import FullScreenLoader from '../organisms/FullScreenLoader';
-import Header from '../Layouts/Header';
 import FAQ from '../organisms/FAQ';
 import Button from '../atoms/Button';
-import Footer from '../Layouts/Footer';
 
 // Define types for form data
 interface FormData {
@@ -140,9 +138,7 @@ export default function LandingPage(): JSX.Element {
   return (
     <div className="font-montserrat">
       <main>
-        <div className="min-h-screen">
-          <Header />
-          
+        <div className="min-h-screen">          
           {/* Hero Section - Improved for responsiveness */}
           <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full">
@@ -173,18 +169,18 @@ export default function LandingPage(): JSX.Element {
                   <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight"
+                    className="text-sm sm:text-4xl font-bold text-white mb-4 md:mb-3 leading-tight"
                   >
-                    Streamline Your <span className="text-blue-400">Procurement</span> Process
+                    Transform Your <span className="text-blue-400">Procurement</span> Process!
                   </motion.h1>
                   
                   <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
-                    className="text-lg md:text-xl text-slate-300 mb-6 md:mb-8 leading-relaxed"
+                    className="text-lg md:text-xl text-slate-300 mb-6 md:mb-4 leading-relaxed"
                   >
-                    Seamless & Secure P2P Transactions – Anytime, Anywhere!
+                     Faster, Smarter, More Efficient
                   </motion.p>
                   
                   {/* Improved button layout for mobile */}
@@ -288,10 +284,10 @@ export default function LandingPage(): JSX.Element {
           {/* Features Highlights - make cards responsive */}
           <section className="bg-white py-16 md:py-24">
             <div className="container mx-auto px-4">
-              <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto px-4">
+              <div className="text-center mb-6 md:mb-10 max-w-7xl mx-auto px-4">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">Transform Your Procurement Operations</h2>
                 <p className="text-lg md:text-xl text-gray-600">
-                  Our platform provides everything you need to streamline purchases, manage suppliers, and drive cost savings.
+                Our end-to-end procurement platform reduces costs by 25%, cuts processing time by 30%, and delivers 99% compliance - all while simplifying every step from requisition to payment.
                 </p>
               </div>
               
@@ -479,7 +475,6 @@ export default function LandingPage(): JSX.Element {
           </section>
 
           {/* Footer */}
-          <Footer />
         </div>
       </main>
     </div>
