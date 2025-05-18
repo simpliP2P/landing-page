@@ -323,13 +323,13 @@ export default function AboutPage() {
                     name: "Ola Adeyemi",
                     role: "Chief Executive Officer",
                     image: "/happy-young-african-businessman-sm.png",
-                    description: "Anjola over 15 years in procurement, Oluwaseun leads our vision to transform Nigeria's procurement landscape."
+                    description: "Ola over 15 years in procurement, Ola leads our vision to transform Nigeria's procurement landscape."
                   },
                   {
                     name: "Anjola Adeyemi",
                     role: "Chief Technology Officer",
                     image: "/happy-young-african-businessman-sm.png",
-                    description: "Ola brings extensive experience in building enterprise-grade software solutions for the African market."
+                    description: "Anjola brings extensive experience in building enterprise-grade software solutions for the African market."
                   },
                   {
                     name: "Dolapo BAS",
