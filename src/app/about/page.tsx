@@ -320,13 +320,13 @@ export default function AboutPage() {
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
                   {
-                    name: "Anjola Adeyemi",
+                    name: "Ola Adeyemi",
                     role: "Chief Executive Officer",
                     image: "/happy-young-african-businessman-sm.png",
                     description: "Anjola over 15 years in procurement, Oluwaseun leads our vision to transform Nigeria's procurement landscape."
                   },
                   {
-                    name: "Ola Adeyemi",
+                    name: "Anjola Adeyemi",
                     role: "Chief Technology Officer",
                     image: "/happy-young-african-businessman-sm.png",
                     description: "Ola brings extensive experience in building enterprise-grade software solutions for the African market."
