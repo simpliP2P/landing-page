@@ -1,16 +1,71 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FaCheckCircle, FaLightbulb, FaHandshake, FaGlobe } from 'react-icons/fa';
-import Link from 'next/link';
+import Header from '../../components/Layouts/Header';
+import Footer from '../../components/Layouts/Footer';
+import TeamMemberModal from '../../components/molecules/TeamMemberModal';
+
+// Team members data with full bios
+const teamMembers = [
+  {
+    name: "Olalekan Adeyemi",
+    role: "Founder & CEO",
+    image: "/happy-young-african-businessman-sm.png",
+    description: "Olalekan is the visionary founder of SimpliP2P with over a decade of experience across global organizations. As a certified SAP MDG specialist, he has led complex data migration and system integration initiatives, bridging procurement strategy with data-driven execution.",
+    fullBio: `
+      <p>Olalekan Adeyemi is the visionary founder of SimpliP2P, Nigeria's innovative eProcurement solution transforming how businesses manage sourcing and supplier engagement. With over a decade of hands-on experience across global organizations, Olalekan possesses deep, end-to-end knowledge of procurement and supply chain data management from a technical and operational standpoint.</p>
+      <p>As a certified SAP Master Data Governance (MDG) specialist, he has led complex data migration, governance, and system integration initiatives—bridging procurement strategy with data-driven execution. His career spans major implementations involving S/4HANA, ECC, Oracle EBS, and Dynamics 365, where he engineered master data frameworks across P2P lifecycles, ensuring compliance, integrity, and business efficiency.</p>
+      <p>At the heart of SimpliP2P is Olalekan's commitment to re-engineering procurement through intelligent automation, transparency, and scalable digital infrastructure tailored for African markets.</p>
+    `
+  },
+  {
+    name: "Anjola Adeniyi",
+    role: "Product Manager",
+    image: "/happy-young-african-businessman-sm.png",
+    description: "Anjola oversees the product roadmap for SimpliP2P, translating customer needs into functional requirements. He specializes in crafting intuitive procurement workflows that optimize user experience while ensuring robust functionality for vendor management, sourcing, and compliance.",
+    fullBio: `
+      <p>As Product Manager at SimpliP2P, Anjola drives the strategic vision and development of our procurement platform. He excels at understanding the complex needs of procurement teams and translating them into intuitive digital solutions that streamline operations.</p>
+      <p>Anjola oversees feature prioritization, user research, and works closely with engineering to deliver functionality that addresses real-world procurement challenges. His expertise in user experience design ensures that SimpliP2P remains accessible to organizations regardless of their digital maturity.</p>
+      <p>With a focus on continuous improvement, Anjola regularly analyzes platform usage patterns and gathers customer feedback to identify opportunities for enhancing SimpliP2P's capabilities, making procurement processes more efficient and transparent.</p>
+    `
+  },
+  {
+    name: "Dolapo Adekunle",
+    role: "Head of Marketing",
+    image: "/happy-young-african-businessman-sm.png",
+    description: "Dolapo leads our marketing initiatives, crafting compelling narratives about SimpliP2P's value proposition. She develops targeted campaigns that resonate with procurement professionals across Nigerian industries, driving awareness and adoption of our platform.",
+    fullBio: `
+      <p>As Head of Marketing at SimpliP2P, Dolapo is responsible for building our brand presence across the Nigerian procurement landscape. She develops comprehensive marketing strategies that highlight how our platform addresses the unique challenges of local businesses.</p>
+      <p>Dolapo creates educational content that showcases the benefits of digital procurement transformation, from cost savings to operational efficiency. She works closely with sales to develop messaging that resonates with key decision-makers in finance, procurement, and operations.</p>
+      <p>Through market research and industry analysis, Dolapo ensures that SimpliP2P's positioning remains relevant and compelling in Nigeria's evolving business environment. Her campaigns focus on building awareness, generating qualified leads, and supporting customer retention efforts.</p>
+    `
+  }
+];
 
 export default function AboutPage() {
+  // State to control the modal
+  const [selectedMember, setSelectedMember] = useState<(typeof teamMembers)[0] | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (member: (typeof teamMembers)[0]) => {
+    setSelectedMember(member);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="font-montserrat">
       <main>
-        <div className="min-h-screen">          
+        <div className="min-h-screen">
+          <Header />
+          
           {/* Hero Section */}
           <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full">
@@ -109,7 +164,7 @@ export default function AboutPage() {
                 >
                   <div className="relative rounded-2xl overflow-hidden shadow-xl">
                     <Image
-                      src="/happy-young-african-businessman.png"
+                      src="/african-woman-manager-looking-camera-smiling-holding-clipboard-while-diverse-coworkers-talking-background.png"
                       alt="African Business Team"
                       width={600}
                       height={500}
@@ -318,26 +373,7 @@ export default function AboutPage() {
               </div>
               
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {[
-                  {
-                    name: "Ola Adeyemi",
-                    role: "Chief Executive Officer",
-                    image: "/happy-young-african-businessman-sm.png",
-                    description: "Ola over 15 years in procurement, Ola leads our vision to transform Nigeria's procurement landscape."
-                  },
-                  {
-                    name: "Anjola Adeyemi",
-                    role: "Chief Technology Officer",
-                    image: "/happy-young-african-businessman-sm.png",
-                    description: "Anjola brings extensive experience in building enterprise-grade software solutions for the African market."
-                  },
-                  {
-                    name: "Dolapo BAS",
-                    role: "Head of Operations",
-                    image: "/happy-young-african-businessman-sm.png",
-                    description: "Dolapo ensures our platform delivers consistent value while meeting the unique needs of Nigerian businesses."
-                  }
-                ].map((member, index) => (
+                {teamMembers.map((member, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
@@ -358,7 +394,16 @@ export default function AboutPage() {
                     <div className="p-6">
                       <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
                       <p className="text-blue-600 font-medium mb-3">{member.role}</p>
-                      <p className="text-gray-600 text-sm">{member.description}</p>
+                      <p className="text-gray-600 text-sm line-clamp-3 mb-4">{member.description}</p>
+                      <button 
+                        onClick={() => openModal(member)}
+                        className="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors flex items-center"
+                      >
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
                     </div>
                   </motion.div>
                 ))}
@@ -377,7 +422,7 @@ export default function AboutPage() {
                   Connect with our team to learn how SimpliP2P can help your organization
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
+                  <Link 
                     href="/contact" 
                     className="px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                   >
@@ -394,8 +439,18 @@ export default function AboutPage() {
             </div>
           </section>
           
+          <Footer />
         </div>
       </main>
+
+      {/* Team Member Modal */}
+      {selectedMember && (
+        <TeamMemberModal 
+          isOpen={isModalOpen} 
+          closeModal={closeModal} 
+          member={selectedMember}
+        />
+      )}
     </div>
   );
 }
