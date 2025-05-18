@@ -23,7 +23,7 @@ const teamMembers = [
     `
   },
   {
-    name: "Anjola Adeniyi",
+    name: "Anjola Adeyemi",
     role: "Product Manager",
     image: "/happy-young-african-businessman-sm.png",
     description: "Anjola oversees the product roadmap for SimpliP2P, translating customer needs into functional requirements. He specializes in crafting intuitive procurement workflows that optimize user experience while ensuring robust functionality for vendor management, sourcing, and compliance.",
@@ -34,7 +34,7 @@ const teamMembers = [
     `
   },
   {
-    name: "Dolapo Adekunle",
+    name: "Dolapo BAS",
     role: "Head of Marketing",
     image: "/happy-young-african-businessman-sm.png",
     description: "Dolapo leads our marketing initiatives, crafting compelling narratives about SimpliP2P's value proposition. She develops targeted campaigns that resonate with procurement professionals across Nigerian industries, driving awareness and adoption of our platform.",
