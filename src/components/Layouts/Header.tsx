@@ -49,7 +49,7 @@ const Header = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg py-2' : 'bg-transparent py-3 md:py-4'
+        isScrolled ? 'bg-secondary/60 backdrop-blur-sm shadow-lg py-2' : 'bg-transparent py-3 md:py-4'
       }`}
     >
       <div className="container mx-auto px-4">
@@ -64,7 +64,8 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-8 lg:gap-12">
             {[
               { name: "Home", path: "/" },
-              { name: "About", path: "/about" }
+              { name: "About", path: "/about" },
+              { name: "Solution", path: "#" }
             ].map((item, i) => (
               <Link 
                 key={i} 
@@ -78,7 +79,6 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Desktop Action Buttons */}
           <div className="hidden md:flex items-center">
             <Button
               onClick={handleSignUp}
