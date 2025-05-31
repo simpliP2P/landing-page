@@ -22,6 +22,15 @@ const teamMembers = [
       <p>At the heart of SimpliP2P is Olalekan's commitment to re-engineering procurement through intelligent automation, transparency, and scalable digital infrastructure tailored for African markets.</p>
     `
   },
+    {
+    name: "Banke Shaba",
+    role: " SAP FICO Consultant ",
+    image: "/happy-young-african-businessman-sm.png",
+    description: "Banke Shaba is a certified SAP FICO Consultant, ACCA part-qualified, with a master’s degree and over 10 years of experience delivering finance transformation across FMCG, pharmaceuticals, manufacturing, the public sector, financial institutions, and retail",
+    fullBio: `
+      <p>Her expertise spans the full S/4HANA lifecycle, with a strong focus on go-to-market delivery and transformation in the areas of Procure-to-Pay (P2P), Order-to-Cash (OTC), and banking. She has deep experience in core finance modules, credit management, budgeting, forecasting, reporting, and data migration, as well as SAP Public Cloud, FI-CA for public sector rent collection, and bank connectivity solution</p>
+      <p>Banke is known for translating complex business requirements into practical SAP solutions that modernise finance operations, improve compliance, and deliver measurable value.</p>    `
+  },
   {
     name: "Anjola Adeyemi",
     role: "Product Manager",
