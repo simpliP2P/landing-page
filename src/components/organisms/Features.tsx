@@ -23,7 +23,7 @@ const Features = () => {
                     className="bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-gray-100"
                   >
                     <div className={`mb-4 p-3 rounded-full bg-gray-100 inline-block ${feature.color}`}>
-                      {feature.icon}
+                      (feature.icon)
                     </div>
                     <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">{feature.title}</h3>
                     <p className="text-[#808080] font-medium text-[15px] md:text-[17px] leading-6">{feature.description}</p>
