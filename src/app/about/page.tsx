@@ -24,20 +24,20 @@ const teamMembers = [
   },
     {
     name: "Banke Shaba",
-    role: " SAP FICO Consultant ",
+    role: " Co -founder ",
     image: "/happy-young-african-businessman-sm.png",
-    description: "Banke Shaba is a certified SAP FICO Consultant, ACCA part-qualified, with a master’s degree and over 10 years of experience delivering finance transformation across FMCG, pharmaceuticals, manufacturing, the public sector, financial institutions, and retail",
+    description: "Banke Shaba is a certified Co -founder, ACCA part-qualified, with a master’s degree and over 10 years of experience delivering finance transformation across FMCG, pharmaceuticals, manufacturing, the public sector, financial institutions, and retail",
     fullBio: `
       <p>Her expertise spans the full S/4HANA lifecycle, with a strong focus on go-to-market delivery and transformation in the areas of Procure-to-Pay (P2P), Order-to-Cash (OTC), and banking. She has deep experience in core finance modules, credit management, budgeting, forecasting, reporting, and data migration, as well as SAP Public Cloud, FI-CA for public sector rent collection, and bank connectivity solution</p>
       <p>Banke is known for translating complex business requirements into practical SAP solutions that modernise finance operations, improve compliance, and deliver measurable value.</p>    `
   },
   {
     name: "Anjola Adeyemi",
-    role: "Product Manager",
+    role: "Technical Project Manager",
     image: "/happy-young-african-businessman-sm.png",
     description: "Anjola oversees the product roadmap for SimpliP2P, translating customer needs into functional requirements. He specializes in crafting intuitive procurement workflows that optimize user experience while ensuring robust functionality for vendor management, sourcing, and compliance.",
     fullBio: `
-      <p>As Product Manager at SimpliP2P, Anjola drives the strategic vision and development of our procurement platform. He excels at understanding the complex needs of procurement teams and translating them into intuitive digital solutions that streamline operations.</p>
+      <p>As Technical Project Manager at SimpliP2P, Anjola drives the strategic vision and development of our procurement platform. He excels at understanding the complex needs of procurement teams and translating them into intuitive digital solutions that streamline operations.</p>
       <p>Anjola oversees feature prioritization, user research, and works closely with engineering to deliver functionality that addresses real-world procurement challenges. His expertise in user experience design ensures that SimpliP2P remains accessible to organizations regardless of their digital maturity.</p>
       <p>With a focus on continuous improvement, Anjola regularly analyzes platform usage patterns and gathers customer feedback to identify opportunities for enhancing SimpliP2P's capabilities, making procurement processes more efficient and transparent.</p>
     `
