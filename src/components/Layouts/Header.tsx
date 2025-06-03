@@ -86,7 +86,7 @@ const Header = () => {
               onClick={handleSignUp}
               className="px-5 py-2 lg:w-[170px] lg:h-[48px] lg:px-[30px] lg:py-[10px] rounded-lg bg-[#0D0E4E] text-white hover:bg-[#0D0E4E]/90 transition-colors flex justify-center items-center"
             >
-              <span className="font-bold text-sm lg:text-base">Get Started</span>  
+              <p className="font-bold text-sm lg:text-base">Get Started</p>  
             </Button>
           </div>
 
@@ -114,7 +114,8 @@ const Header = () => {
           <nav className="flex flex-col gap-2">
             {[
               { name: "Home", path: "/" },
-              { name: "About", path: "/about" }
+              { name: "About", path: "/about" },
+              { name: "Book A Demo", path: "/book-a-demo" }
             ].map((item, i) => (
               <Link 
                 key={i}
@@ -131,9 +132,9 @@ const Header = () => {
             <div className="mt-4">
               <Button
                 onClick={handleSignUp}
-                className="w-full py-3 rounded-lg bg-[#0D0E4E] text-white hover:bg-[#0D0E4E]/90 transition-colors shadow-lg text-center"
+                className="w-full py-3 rounded-lg bg-[#0D0E4E] text-white hover:bg-[#0D0E4E]/90 transition-colors shadow-lg flex justify-center items-center text-center"
               >
-                Get Started
+                <p>Get Started</p>
               </Button>
             </div>
           </nav>

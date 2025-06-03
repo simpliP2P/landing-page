@@ -109,23 +109,7 @@ const FAQ = () => {
               </motion.div>
             ))}
           </div>
-          
-          <div className="text-center mt-8 md:mt-10">
-            <motion.a
-              href="#case-studies"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center gap-2 text-blue-600 font-medium hover:text-blue-700 transition-colors text-sm md:text-base"
-            >
-              <span>View more case studies</span>
-              <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </motion.a>
-          </div>
         </div>
-
         {/* FAQ Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start">
           {/* Left Column: FAQ Questions */}
