@@ -2,7 +2,7 @@
 import { Resend } from "resend"
 import { z } from "zod"
 
-const apiKey = process.env.RESEND_API_KEY2 ?? '';
+const apiKey = process.env.RESEND_API_KEY2 ?? 're_gUgxwreR_7BUgoHAbPvZiqZpgBfa1jj61';
 const resend = new Resend(apiKey);
 
 export async function SendForm(prevState:{message:string}, 
