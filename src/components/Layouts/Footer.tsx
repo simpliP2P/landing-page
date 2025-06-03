@@ -198,13 +198,13 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} simpliP2P. All rights reserved.
           </div>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-            <Link href="/privacy-policy" className="hover:text-blue-400 transition-colors">
+            <Link href="/" className="hover:text-blue-400 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms-of-service" className="hover:text-blue-400 transition-colors">
+            <Link href="/" className="hover:text-blue-400 transition-colors">
               Terms of Service
             </Link>
-            <Link href="/cookie-policy" className="hover:text-blue-400 transition-colors">
+            <Link href="/" className="hover:text-blue-400 transition-colors">
               Cookie Policy
             </Link>
           </div>
