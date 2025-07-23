@@ -9,14 +9,14 @@ const HeroSection = () => {
   const router = useRouter();
 
   const handleGetStarted = () => {
-    router.push('https://simplip2p.vercel.app/register');
+    router.push('https://app.simplip2p.com/register');
   };
 
   const heroImages = [
-    "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80", // Professional team analyzing procurement data
-    "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80", // Digital procurement dashboard
-    "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80", // Business analytics on laptop
-    "https://images.unsplash.com/photo-1494961104809-3c171b308be0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80", // Supply chain logistics warehouse
+    '/procurement-1.webp',
+    '/procurement-2.webp',
+    '/procurement-3.webp',
+    '/procurement-4.webp',
   ];
   return (
     <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden min-h-[90vh] flex items-center">
