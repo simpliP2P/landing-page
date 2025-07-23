@@ -1,13 +1,18 @@
 "use client";
 
-import React, { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { FaCheckCircle, FaLightbulb, FaHandshake, FaGlobe } from 'react-icons/fa';
-import Header from '../../components/Layouts/Header';
-import Footer from '../../components/Layouts/Footer';
-import TeamMemberModal from '../../components/molecules/TeamMemberModal';
+import React, { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  FaCheckCircle,
+  FaLightbulb,
+  FaHandshake,
+  FaGlobe,
+} from "react-icons/fa";
+import Header from "../../components/Layouts/Header";
+import Footer from "../../components/Layouts/Footer";
+import TeamMemberModal from "../../components/molecules/TeamMemberModal";
 
 // Team members data with full bios
 const teamMembers = [
@@ -15,49 +20,55 @@ const teamMembers = [
     name: "Olalekan",
     role: "Founder & CEO",
     image: "/happy-young-african-businessman-sm.png",
-    description: "Olalekan is the visionary founder of SimpliP2P with over a decade of experience across global organizations. As a certified SAP MDG specialist, he has led complex data migration and system integration initiatives, bridging procurement strategy with data-driven execution.",
+    description:
+      "Olalekan is the visionary founder of SimpliP2P with over a decade of experience across global organizations. As a certified SAP MDG specialist, he has led complex data migration and system integration initiatives, bridging procurement strategy with data-driven execution.",
     fullBio: `
       <p>Olalekan is the visionary founder of SimpliP2P, Nigeria's innovative eProcurement solution transforming how businesses manage sourcing and supplier engagement. With over a decade of hands-on experience across global organizations, Olalekan possesses deep, end-to-end knowledge of procurement and supply chain data management from a technical and operational standpoint.</p>
       <p>As a certified SAP Master Data Governance (MDG) specialist, he has led complex data migration, governance, and system integration initiatives—bridging procurement strategy with data-driven execution. His career spans major implementations involving S/4HANA, ECC, Oracle EBS, and Dynamics 365, where he engineered master data frameworks across P2P lifecycles, ensuring compliance, integrity, and business efficiency.</p>
       <p>At the heart of SimpliP2P is Olalekan's commitment to re-engineering procurement through intelligent automation, transparency, and scalable digital infrastructure tailored for African markets.</p>
-    `
+    `,
   },
-    {
+  {
     name: "Banke Shaba",
     role: " Co -founder ",
     image: "/happy-young-african-businessman-sm.png",
-    description: "Banke Shaba is a certified Co -founder, ACCA part-qualified, with a master’s degree and over 10 years of experience delivering finance transformation across FMCG, pharmaceuticals, manufacturing, the public sector, financial institutions, and retail",
+    description:
+      "Banke Shaba is a certified Co -founder, ACCA part-qualified, with a master’s degree and over 10 years of experience delivering finance transformation across FMCG, pharmaceuticals, manufacturing, the public sector, financial institutions, and retail",
     fullBio: `
       <p>Her expertise spans the full S/4HANA lifecycle, with a strong focus on go-to-market delivery and transformation in the areas of Procure-to-Pay (P2P), Order-to-Cash (OTC), and banking. She has deep experience in core finance modules, credit management, budgeting, forecasting, reporting, and data migration, as well as SAP Public Cloud, FI-CA for public sector rent collection, and bank connectivity solution</p>
-      <p>Banke is known for translating complex business requirements into practical SAP solutions that modernise finance operations, improve compliance, and deliver measurable value.</p>    `
+      <p>Banke is known for translating complex business requirements into practical SAP solutions that modernise finance operations, improve compliance, and deliver measurable value.</p>    `,
   },
   {
     name: "Anjola Adeyemi",
     role: "Technical Project Manager",
     image: "/happy-young-african-businessman-sm.png",
-    description: "Anjola oversees the product roadmap for SimpliP2P, translating customer needs into functional requirements. He specializes in crafting intuitive procurement workflows that optimize user experience while ensuring robust functionality for vendor management, sourcing, and compliance.",
+    description:
+      "Anjola oversees the product roadmap for SimpliP2P, translating customer needs into functional requirements. He specializes in crafting intuitive procurement workflows that optimize user experience while ensuring robust functionality for vendor management, sourcing, and compliance.",
     fullBio: `
       <p>As Technical Project Manager at SimpliP2P, Anjola drives the strategic vision and development of our procurement platform. He excels at understanding the complex needs of procurement teams and translating them into intuitive digital solutions that streamline operations.</p>
       <p>Anjola oversees feature prioritization, user research, and works closely with engineering to deliver functionality that addresses real-world procurement challenges. His expertise in user experience design ensures that SimpliP2P remains accessible to organizations regardless of their digital maturity.</p>
       <p>With a focus on continuous improvement, Anjola regularly analyzes platform usage patterns and gathers customer feedback to identify opportunities for enhancing SimpliP2P's capabilities, making procurement processes more efficient and transparent.</p>
-    `
+    `,
   },
   {
     name: "Dolapo BAS",
     role: "Head of Marketing",
     image: "/happy-young-african-businessman-sm.png",
-    description: "Dolapo leads our marketing initiatives, crafting compelling narratives about SimpliP2P's value proposition. She develops targeted campaigns that resonate with procurement professionals across Nigerian industries, driving awareness and adoption of our platform.",
+    description:
+      "Dolapo leads our marketing initiatives, crafting compelling narratives about SimpliP2P's value proposition. She develops targeted campaigns that resonate with procurement professionals across Nigerian industries, driving awareness and adoption of our platform.",
     fullBio: `
       <p>As Head of Marketing at SimpliP2P, Dolapo is responsible for building our brand presence across the Nigerian procurement landscape. She develops comprehensive marketing strategies that highlight how our platform addresses the unique challenges of local businesses.</p>
       <p>Dolapo creates educational content that showcases the benefits of digital procurement transformation, from cost savings to operational efficiency. She works closely with sales to develop messaging that resonates with key decision-makers in finance, procurement, and operations.</p>
       <p>Through market research and industry analysis, Dolapo ensures that SimpliP2P's positioning remains relevant and compelling in Nigeria's evolving business environment. Her campaigns focus on building awareness, generating qualified leads, and supporting customer retention efforts.</p>
-    `
-  }
+    `,
+  },
 ];
 
 export default function AboutPage() {
   // State to control the modal
-  const [selectedMember, setSelectedMember] = useState<(typeof teamMembers)[0] | null>(null);
+  const [selectedMember, setSelectedMember] = useState<
+    (typeof teamMembers)[0] | null
+  >(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = (member: (typeof teamMembers)[0]) => {
@@ -74,12 +85,10 @@ export default function AboutPage() {
       <main>
         <div className="min-h-screen">
           <Header />
-          
-          {/* Hero Section */}
           <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full">
               <Image
-                src="/hero-bg.png"
+                src="/procurement-1.webp"
                 alt="Background Pattern"
                 fill
                 sizes="100vw"
@@ -87,7 +96,7 @@ export default function AboutPage() {
                 priority
               />
             </div>
-            
+
             <div className="container mx-auto px-4 relative z-10">
               <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
                 <motion.h1
@@ -97,7 +106,7 @@ export default function AboutPage() {
                 >
                   About <span className="text-blue-400">SimpliP2P</span>
                 </motion.h1>
-                
+
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -109,7 +118,7 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
-          
+
           {/* Our Story Section */}
           <section className="py-16 md:py-24 bg-white">
             <div className="container mx-auto px-4">
@@ -128,17 +137,30 @@ export default function AboutPage() {
                   </h2>
                   <div className="space-y-4 text-gray-600">
                     <p className="text-base md:text-lg">
-                      SimpliP2P was born from a simple yet powerful idea: to transform the traditional procurement landscape in Nigeria by harnessing the power of digital innovation. Rooted in deep industry experience and a firm understanding of local procurement challenges, we set out to streamline the Procure-to-pay (P2P) process through a secure, user-centric, and transparent platform.
+                      SimpliP2P was born from a simple yet powerful idea: to
+                      transform the traditional procurement landscape in Nigeria
+                      by harnessing the power of digital innovation. Rooted in
+                      deep industry experience and a firm understanding of local
+                      procurement challenges, we set out to streamline the
+                      Procure-to-pay (P2P) process through a secure,
+                      user-centric, and transparent platform.
                     </p>
                     <p className="text-base md:text-lg">
-                      Our name, SimpliP2P—short for Simplified Procure-to-Pay—embodies our mission: to simplify how businesses manage procurement by eliminating inefficiencies, reducing manual paperwork, and promoting vendor inclusivity.
+                      Our name, SimpliP2P—short for Simplified
+                      Procure-to-Pay—embodies our mission: to simplify how
+                      businesses manage procurement by eliminating
+                      inefficiencies, reducing manual paperwork, and promoting
+                      vendor inclusivity.
                     </p>
                     <p className="text-base md:text-lg">
-                      At SimpliP2P, we bridge the gap between public and private sector buyers and their suppliers through a robust eProcurement solution designed specifically for Nigeria&apos;s evolving business environment.
+                      At SimpliP2P, we bridge the gap between public and private
+                      sector buyers and their suppliers through a robust
+                      eProcurement solution designed specifically for
+                      Nigeria&apos;s evolving business environment.
                     </p>
                   </div>
                 </motion.div>
-                
+
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -160,7 +182,7 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
-          
+
           {/* Local-First Approach Section */}
           <section className="py-16 md:py-24 bg-gray-50">
             <div className="container mx-auto px-4">
@@ -173,7 +195,7 @@ export default function AboutPage() {
                 >
                   <div className="relative rounded-2xl overflow-hidden shadow-xl">
                     <Image
-                      src="/african-woman-manager-looking-camera-smiling-holding-clipboard-while-diverse-coworkers-talking-background.png"
+                      src="/procurement-2.webp"
                       alt="African Business Team"
                       width={600}
                       height={500}
@@ -182,18 +204,20 @@ export default function AboutPage() {
                     />
                     <div className="absolute inset-0 border border-gray-200 rounded-2xl pointer-events-none"></div>
                   </div>
-                  
+
                   <div className="absolute -bottom-6 -right-6 bg-white p-4 md:p-6 rounded-xl shadow-lg max-w-[220px] hidden md:block">
                     <div className="flex items-center gap-3 mb-2">
                       <FaLightbulb className="text-yellow-500 text-xl" />
-                      <h4 className="font-bold text-gray-900">Local Innovation</h4>
+                      <h4 className="font-bold text-gray-900">
+                        Local Innovation
+                      </h4>
                     </div>
                     <p className="text-sm text-gray-600">
                       Built by Nigerians, for the Nigerian market
                     </p>
                   </div>
                 </motion.div>
-                
+
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -207,25 +231,47 @@ export default function AboutPage() {
                   </h2>
                   <div className="space-y-4 text-gray-600">
                     <p className="text-base md:text-lg">
-                      What sets us apart is our local-first approach. We don&apos;t just replicate foreign models; we innovate with the Nigerian context at heart. Our solution empowers procurement teams to do more with less—faster, smarter, and with full accountability.
+                      What sets us apart is our local-first approach. We
+                      don&apos;t just replicate foreign models; we innovate with
+                      the Nigerian context at heart. Our solution empowers
+                      procurement teams to do more with less—faster, smarter,
+                      and with full accountability.
                     </p>
                     <p className="text-base md:text-lg">
-                      Our platform supports strategic sourcing, automated approvals, vendor onboarding, compliance tracking, and end-to-end transparency—helping organizations make informed decisions while staying fully audit-ready.
+                      Our platform supports strategic sourcing, automated
+                      approvals, vendor onboarding, compliance tracking, and
+                      end-to-end transparency—helping organizations make
+                      informed decisions while staying fully audit-ready.
                     </p>
                   </div>
-                  
+
                   <div className="grid grid-cols-2 gap-4 mt-8">
                     {[
-                      { icon: <FaHandshake className="text-blue-500" />, text: "Local Partnerships" },
-                      { icon: <FaGlobe className="text-blue-500" />, text: "Nigerian Market Expertise" },
-                      { icon: <FaCheckCircle className="text-blue-500" />, text: "Compliance-Focused" },
-                      { icon: <FaLightbulb className="text-blue-500" />, text: "Innovative Solutions" }
+                      {
+                        icon: <FaHandshake className="text-blue-500" />,
+                        text: "Local Partnerships",
+                      },
+                      {
+                        icon: <FaGlobe className="text-blue-500" />,
+                        text: "Nigerian Market Expertise",
+                      },
+                      {
+                        icon: <FaCheckCircle className="text-blue-500" />,
+                        text: "Compliance-Focused",
+                      },
+                      {
+                        icon: <FaLightbulb className="text-blue-500" />,
+                        text: "Innovative Solutions",
+                      },
                     ].map((item, i) => (
-                      <div key={i} className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
-                        <div className="text-xl">
-                          {item.icon}
-                        </div>
-                        <p className="font-medium text-sm text-gray-800">{item.text}</p>
+                      <div
+                        key={i}
+                        className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm"
+                      >
+                        <div className="text-xl">{item.icon}</div>
+                        <p className="font-medium text-sm text-gray-800">
+                          {item.text}
+                        </p>
                       </div>
                     ))}
                   </div>
@@ -233,7 +279,7 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
-          
+
           {/* Vision & Mission Section */}
           <section className="py-16 md:py-24 bg-primary text-white">
             <div className="container mx-auto px-4">
@@ -252,10 +298,9 @@ export default function AboutPage() {
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ delay: 0.1 }}
                   className="w-16 md:w-24 h-1 bg-blue-400 mx-auto"
-                >
-                </motion.div>
+                ></motion.div>
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-10">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -274,10 +319,12 @@ export default function AboutPage() {
                   </div>
                   <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
                   <p className="text-lg text-white/80 leading-relaxed">
-                    To be Nigeria&apos;s most trusted eProcurement solution, enabling efficient, fair, and transparent procurement for organizations of all sizes.
+                    To be Nigeria&apos;s most trusted eProcurement solution,
+                    enabling efficient, fair, and transparent procurement for
+                    organizations of all sizes.
                   </p>
                 </motion.div>
-                
+
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -296,13 +343,15 @@ export default function AboutPage() {
                   </div>
                   <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
                   <p className="text-lg text-white/80 leading-relaxed">
-                    To digitize and optimize the procurement process through intuitive technology that enhances value, promotes integrity, and drives measurable business results.
+                    To digitize and optimize the procurement process through
+                    intuitive technology that enhances value, promotes
+                    integrity, and drives measurable business results.
                   </p>
                 </motion.div>
               </div>
             </div>
           </section>
-          
+
           {/* Values Section */}
           <section className="py-16 md:py-24 bg-white">
             <div className="container mx-auto px-4">
@@ -317,29 +366,33 @@ export default function AboutPage() {
                   Our core values shape every aspect of what we do at SimpliP2P
                 </p>
               </div>
-              
+
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
                 {[
                   {
                     icon: "/icon-integrity.svg",
                     title: "Integrity",
-                    description: "We uphold the highest ethical standards in all our actions and decisions."
+                    description:
+                      "We uphold the highest ethical standards in all our actions and decisions.",
                   },
                   {
                     icon: "/icon-innovation.svg",
                     title: "Innovation",
-                    description: "We constantly seek better solutions to Nigeria's procurement challenges."
+                    description:
+                      "We constantly seek better solutions to Nigeria's procurement challenges.",
                   },
                   {
                     icon: "/icon-transparency.svg",
                     title: "Transparency",
-                    description: "We believe in clear, honest communication with all stakeholders."
+                    description:
+                      "We believe in clear, honest communication with all stakeholders.",
                   },
                   {
                     icon: "/icon-excellence.svg",
                     title: "Excellence",
-                    description: "We strive for perfection in our platform, service, and support."
-                  }
+                    description:
+                      "We strive for perfection in our platform, service, and support.",
+                  },
                 ].map((value, index) => (
                   <motion.div
                     key={index}
@@ -358,14 +411,16 @@ export default function AboutPage() {
                         className="h-8 w-8"
                       />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {value.title}
+                    </h3>
                     <p className="text-gray-600">{value.description}</p>
                   </motion.div>
                 ))}
               </div>
             </div>
           </section>
-          
+
           {/* Team Section */}
           <section className="py-16 md:py-24 bg-gray-50">
             <div className="container mx-auto px-4">
@@ -377,10 +432,11 @@ export default function AboutPage() {
                   Meet the Team Behind SimpliP2P
                 </h2>
                 <p className="text-lg text-gray-600">
-                  Our diverse team of experts is committed to revolutionizing Nigeria&apos;s procurement landscape
+                  Our diverse team of experts is committed to revolutionizing
+                  Nigeria&apos;s procurement landscape
                 </p>
               </div>
-              
+
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {teamMembers.map((member, index) => (
                   <motion.div
@@ -401,16 +457,33 @@ export default function AboutPage() {
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
-                      <p className="text-blue-600 font-medium mb-3">{member.role}</p>
-                      <p className="text-gray-600 text-sm line-clamp-3 mb-4">{member.description}</p>
-                      <button 
+                      <h3 className="text-xl font-bold text-gray-900">
+                        {member.name}
+                      </h3>
+                      <p className="text-blue-600 font-medium mb-3">
+                        {member.role}
+                      </p>
+                      <p className="text-gray-600 text-sm line-clamp-3 mb-4">
+                        {member.description}
+                      </p>
+                      <button
                         onClick={() => openModal(member)}
                         className="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors flex items-center"
                       >
                         Read More
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4 ml-1"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
                         </svg>
                       </button>
                     </div>
@@ -419,7 +492,7 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
-          
+
           {/* Contact Section */}
           <section className="py-16 md:py-24 bg-white">
             <div className="container mx-auto px-4">
@@ -428,17 +501,18 @@ export default function AboutPage() {
                   Ready to Transform Your Procurement Process?
                 </h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  Connect with our team to learn how SimpliP2P can help your organization
+                  Connect with our team to learn how SimpliP2P can help your
+                  organization
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
-                    href="/contact" 
+                  <Link
+                    href="/contact"
                     className="px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                   >
                     Contact Us
                   </Link>
-                  <Link 
-                    href="/" 
+                  <Link
+                    href="/"
                     className="px-8 py-3 bg-white text-primary border border-primary rounded-lg font-semibold hover:bg-gray-50 transition-colors"
                   >
                     Back to Home
@@ -447,15 +521,14 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
-          
         </div>
       </main>
 
       {/* Team Member Modal */}
       {selectedMember && (
-        <TeamMemberModal 
-          isOpen={isModalOpen} 
-          closeModal={closeModal} 
+        <TeamMemberModal
+          isOpen={isModalOpen}
+          closeModal={closeModal}
           member={selectedMember}
         />
       )}
