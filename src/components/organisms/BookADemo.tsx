@@ -38,7 +38,7 @@ const BookADemo = () => {
                     
                     <div className="relative h-64 md:h-96 rounded-xl overflow-hidden mb-6">
                         <Image 
-                            src="/procurement.webp"
+                            src="/procurement-3.webp"
                             alt="Digital procurement dashboard with analytics" 
                             layout="fill" 
                             objectFit="cover"
