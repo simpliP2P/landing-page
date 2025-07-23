@@ -35,8 +35,8 @@ const Header = () => {
   }, []);
 
   const handleSignUp = () => {
-    router.push('https://simplip2p.vercel.app/register');
-    setIsMenuOpen(false); // Close menu after navigation
+    router.push('https://app.simplip2p.com/register');
+    setIsMenuOpen(false); 
   };
 
   const toggleMenu = () => {
