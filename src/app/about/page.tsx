@@ -194,7 +194,7 @@ export default function AboutPage() {
                 >
                   <div className="relative rounded-2xl overflow-hidden shadow-xl">
                     <Image
-                      src="/procurement-2.webp"
+                      src="/procurement-3.webp"
                       alt="African Business Team"
                       width={600}
                       height={500}
