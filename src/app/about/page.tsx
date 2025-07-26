@@ -11,7 +11,6 @@ import {
   FaGlobe,
 } from "react-icons/fa";
 import Header from "../../components/Layouts/Header";
-import Footer from "../../components/Layouts/Footer";
 import TeamMemberModal from "../../components/molecules/TeamMemberModal";
 
 // Team members data with full bios
