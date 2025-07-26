@@ -38,8 +38,8 @@ const teamMembers = [
       <p>Banke is known for translating complex business requirements into practical SAP solutions that modernise finance operations, improve compliance, and deliver measurable value.</p>    `,
   },
   {
-    name: "Anjola Adeyemi",
-    role: "Technical Project Manager",
+    name: "Anjola",
+    role: "Technical Product Manager",
     image: "/Anjola.jpg",
     description:
       "Anjola oversees the product roadmap for SimpliP2P, translating customer needs into functional requirements. He specializes in crafting intuitive procurement workflows that optimize user experience while ensuring robust functionality for vendor management, sourcing, and compliance.",
