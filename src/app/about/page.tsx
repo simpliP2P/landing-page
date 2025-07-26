@@ -11,7 +11,6 @@ import {
   FaGlobe,
 } from "react-icons/fa";
 import Header from "../../components/Layouts/Header";
-import Footer from "../../components/Layouts/Footer";
 import TeamMemberModal from "../../components/molecules/TeamMemberModal";
 
 // Team members data with full bios
@@ -19,7 +18,7 @@ const teamMembers = [
   {
     name: "Olalekan",
     role: "Founder & CEO",
-    image: "/happy-young-african-businessman-sm.png",
+    image: "/Ola.jpg",
     description:
       "Olalekan is the visionary founder of SimpliP2P with over a decade of experience across global organizations. As a certified SAP MDG specialist, he has led complex data migration and system integration initiatives, bridging procurement strategy with data-driven execution.",
     fullBio: `
@@ -31,7 +30,7 @@ const teamMembers = [
   {
     name: "Banke",
     role: " Co -founder ",
-    image: "/happy-young-african-businessman-sm.png",
+    image: "/Banke.jpg",
     description:
       "Banke Shaba is a certified Co -founder, ACCA part-qualified, with a master’s degree and over 10 years of experience delivering finance transformation across FMCG, pharmaceuticals, manufacturing, the public sector, financial institutions, and retail",
     fullBio: `
@@ -39,9 +38,9 @@ const teamMembers = [
       <p>Banke is known for translating complex business requirements into practical SAP solutions that modernise finance operations, improve compliance, and deliver measurable value.</p>    `,
   },
   {
-    name: "Anjola",
-    role: "Technical Product Manager",
-    image: "/happy-young-african-businessman-sm.png",
+    name: "Anjola Adeyemi",
+    role: "Technical Project Manager",
+    image: "/Anjola.jpg",
     description:
       "Anjola oversees the product roadmap for SimpliP2P, translating customer needs into functional requirements. He specializes in crafting intuitive procurement workflows that optimize user experience while ensuring robust functionality for vendor management, sourcing, and compliance.",
     fullBio: `
@@ -195,7 +194,7 @@ export default function AboutPage() {
                 >
                   <div className="relative rounded-2xl overflow-hidden shadow-xl">
                     <Image
-                      src="/procurement-2.webp"
+                      src="/procurement-3.webp"
                       alt="African Business Team"
                       width={600}
                       height={500}
