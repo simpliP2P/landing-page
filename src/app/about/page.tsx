@@ -110,7 +110,7 @@ export default function AboutPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 }}
-                  className="text-lg md:text-xl text-black mb-8 leading-relaxed"
+                  className="text-[32px] md:text-xl text-black mb-8 leading-relaxed font-bold"
                 >
                   Transforming procurement in Nigeria through digital innovation
                 </motion.p>
