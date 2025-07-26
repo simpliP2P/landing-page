@@ -29,7 +29,7 @@ const teamMembers = [
     `,
   },
   {
-    name: "Banke Shaba",
+    name: "Banke",
     role: " Co -founder ",
     image: "/happy-young-african-businessman-sm.png",
     description:
@@ -39,19 +39,19 @@ const teamMembers = [
       <p>Banke is known for translating complex business requirements into practical SAP solutions that modernise finance operations, improve compliance, and deliver measurable value.</p>    `,
   },
   {
-    name: "Anjola Adeyemi",
-    role: "Technical Project Manager",
+    name: "Anjola",
+    role: "Technical Product Manager",
     image: "/happy-young-african-businessman-sm.png",
     description:
       "Anjola oversees the product roadmap for SimpliP2P, translating customer needs into functional requirements. He specializes in crafting intuitive procurement workflows that optimize user experience while ensuring robust functionality for vendor management, sourcing, and compliance.",
     fullBio: `
-      <p>As Technical Project Manager at SimpliP2P, Anjola drives the strategic vision and development of our procurement platform. He excels at understanding the complex needs of procurement teams and translating them into intuitive digital solutions that streamline operations.</p>
+      <p>As Technical Product Manager at SimpliP2P, Anjola drives the strategic vision and development of our procurement platform. He excels at understanding the complex needs of procurement teams and translating them into intuitive digital solutions that streamline operations.</p>
       <p>Anjola oversees feature prioritization, user research, and works closely with engineering to deliver functionality that addresses real-world procurement challenges. His expertise in user experience design ensures that SimpliP2P remains accessible to organizations regardless of their digital maturity.</p>
       <p>With a focus on continuous improvement, Anjola regularly analyzes platform usage patterns and gathers customer feedback to identify opportunities for enhancing SimpliP2P's capabilities, making procurement processes more efficient and transparent.</p>
     `,
   },
   {
-    name: "Dolapo BAS",
+    name: "Dolapo",
     role: "Head of Marketing",
     image: "/happy-young-african-businessman-sm.png",
     description:
@@ -104,14 +104,14 @@ export default function AboutPage() {
                   animate={{ opacity: 1, y: 0 }}
                   className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
                 >
-                  About <span className="text-blue-400">SimpliP2P</span>
+                  About <span className="text-primary">SimpliP2P</span>
                 </motion.h1>
 
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 }}
-                  className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed"
+                  className="text-lg md:text-xl text-black mb-8 leading-relaxed"
                 >
                   Transforming procurement in Nigeria through digital innovation
                 </motion.p>
