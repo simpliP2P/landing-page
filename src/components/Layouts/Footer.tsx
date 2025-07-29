@@ -14,12 +14,12 @@ import Logo from "../atoms/Logo";
 
 const Footer = () => {
   const solutions = [
-    { name: "Supplier Management", href: "#supplier-management" },
-    { name: "Purchase Order Management", href: "#purchase-order" },
-    { name: "Inventory Management", href: "#Inventory-management" },
-    { name: "Budget", href: "#Budget" },
-    { name: "Audit Trails", href: "#audit-trails" },
-    { name: "Approval workflow", href: "#approval-workflows" },
+    { name: "Supplier Management", href: "/how-it-works?section=supplier-management" },
+    { name: "Purchase Order Management", href: "/how-it-works?section=purchase-order" },
+    { name: "Inventory Management", href: "/how-it-works?section=inventory-management" },
+    { name: "Budget", href: "/how-it-works?section=budget" },
+    { name: "Audit Trails", href: "/how-it-works?section=audit-trails" },
+    { name: "Approval workflow", href: "/how-it-works?section=approval-workflows" },
   ];
 
   const resources = [
