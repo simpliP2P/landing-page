@@ -5,8 +5,6 @@ import FAQ from '../organisms/FAQ';
 import HowItWorks from '../organisms/HowItWorks';
 import Features from '../organisms/Features';
 import HeroSection from '../organisms/HeroSection';
-// Define types for feature items
-
 
 export default function LandingPage(): JSX.Element {
   const [loading, setIsLoading] = useState<boolean>(true);
@@ -21,11 +19,11 @@ export default function LandingPage(): JSX.Element {
   if (loading) return <FullScreenLoader />;
 
   return (
-    <div className="font-montserrat min-h-screen">
+    <main className="font-montserrat min-h-screen text-tertiary font-bold text-xl">
            <HeroSection/>  
             <Features />  
             <HowItWorks />      
             <FAQ />
-    </div>
+    </main>
   );
 }

@@ -1,4 +1,4 @@
-import BookADemo from '@/components/organisms/BookADemo'
+import BookADemo from '@/components/templates/BookADemo'
 import React from 'react'
 
 const page = () => {
