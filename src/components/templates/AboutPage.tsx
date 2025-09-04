@@ -40,14 +40,14 @@ const teamMembers = [
   },
   {
     name: "Anjola",
-    role: "Technical Product Manager",
+    role: "Chief Technology Officer",
     image: "/Anjola.jpg",
     description:
-      "Anjola oversees the product roadmap for SimpliP2P, translating customer needs into functional requirements. He specializes in crafting intuitive procurement workflows that optimize user experience while ensuring robust functionality for vendor management, sourcing, and compliance.",
+      "Anjola leads the technology strategy for SimpliP2P, architecting scalable procurement solutions that optimize user workflows while ensuring robust functionality for vendor management, sourcing, and compliance.",
     fullBio: `
-      <p>As Technical Product Manager at SimpliP2P, Anjola drives the strategic vision and development of our procurement platform. He excels at understanding the complex needs of procurement teams and translating them into intuitive digital solutions that streamline operations.</p>
-      <p>Anjola oversees feature prioritization, user research, and works closely with engineering to deliver functionality that addresses real-world procurement challenges. His expertise in user experience design ensures that SimpliP2P remains accessible to organizations regardless of their digital maturity.</p>
-      <p>With a focus on continuous improvement, Anjola regularly analyzes platform usage patterns and gathers customer feedback to identify opportunities for enhancing SimpliP2P's capabilities, making procurement processes more efficient and transparent.</p>
+      <p>As Chief Technology Officer at SimpliP2P, Anjola drives the strategic vision and technical development of our procurement platform. He excels at designing scalable systems that meet the complex needs of procurement teams while delivering secure and efficient digital solutions.</p>
+      <p>Anjola oversees platform architecture, engineering execution, and technical innovation, ensuring that every feature is reliable, performant, and aligned with business goals. He collaborates closely with product and business teams to translate customer needs into high-quality, future-proof technology solutions.</p>
+      <p>With a focus on continuous improvement, Anjola monitors platform performance, integrates user feedback, and identifies opportunities to enhance SimpliP2P’s capabilities, delivering procurement workflows that are efficient, transparent, and user-friendly.</p>
     `,
   },
   {
