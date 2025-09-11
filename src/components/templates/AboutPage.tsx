@@ -53,7 +53,7 @@ const teamMembers = [
   {
     name: "Dolapo",
     role: "Head of Marketing",
-    image: "/happy-young-african-businessman-sm.png",
+    image: "/dolapo.png",
     description:
       "Dolapo leads our marketing initiatives, crafting compelling narratives about SimpliP2P's value proposition. She develops targeted campaigns that resonate with procurement professionals across Nigerian industries, driving awareness and adoption of our platform.",
     fullBio: `
