@@ -39,7 +39,7 @@ const teamMembers = [
       <p>Banke is known for translating complex business requirements into practical SAP solutions that modernise finance operations, improve compliance, and deliver measurable value.</p>    `,
   },
   {
-  name: "Motunrayo Ologunwa (Mo)",
+  name: "Motunrayo",
   role: "Board Member",
   image: "/Mo.png",
   description:
