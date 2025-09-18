@@ -41,7 +41,7 @@ const teamMembers = [
   {
   name: "Motunrayo Ologunwa (Mo)",
   role: "Board Member",
-  image: "/Mo.jpg",
+  image: "/Mo.png",
   description:
     "Motunrayo Ologunwa (Mo) is a skilled MI/SAP Analyst with expertise in implementing and optimizing SAP solutions to enhance efficiency, streamline operations, and deliver actionable insights.",
   fullBio: `
