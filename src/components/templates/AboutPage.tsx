@@ -30,7 +30,7 @@ const teamMembers = [
   },
   {
     name: "Banke",
-    role: " Co -founder ",
+    role: " Board Member ",
     image: "/Banke.jpg",
     description:
       "Banke Shaba is a certified Co -founder, ACCA part-qualified, with a master’s degree and over 10 years of experience delivering finance transformation across FMCG, pharmaceuticals, manufacturing, the public sector, financial institutions, and retail",
@@ -38,6 +38,24 @@ const teamMembers = [
       <p>Her expertise spans the full S/4HANA lifecycle, with a strong focus on go-to-market delivery and transformation in the areas of Procure-to-Pay (P2P), Order-to-Cash (OTC), and banking. She has deep experience in core finance modules, credit management, budgeting, forecasting, reporting, and data migration, as well as SAP Public Cloud, FI-CA for public sector rent collection, and bank connectivity solution</p>
       <p>Banke is known for translating complex business requirements into practical SAP solutions that modernise finance operations, improve compliance, and deliver measurable value.</p>    `,
   },
+  {
+  name: "Motunrayo Ologunwa (Mo)",
+  role: "Board Member",
+  image: "/Mo.jpg",
+  description:
+    "Motunrayo Ologunwa (Mo) is a skilled MI/SAP Analyst with expertise in implementing and optimizing SAP solutions to enhance efficiency, streamline operations, and deliver actionable insights.",
+  fullBio: `
+    <p>Mo leverages a unique blend of technical SAP expertise and Management Information (MI) analysis to help organizations transform complex data into strategic insights. Her specialization covers:</p>
+    <ul>
+      <li>Business process analysis and re-engineering</li>
+      <li>SAP configuration, testing, and deployment</li>
+      <li>Customized reporting and dashboards for decision-making</li>
+      <li>End-user support and training</li>
+    </ul>
+    <p>Her deep understanding of SAP module integration enables the design of holistic solutions that drive growth and optimize performance. For a consultation on leveraging data and SAP systems effectively, connect with Mo Ologunwa.</p>
+  `,
+},
+
   {
     name: "Anjola",
     role: "Chief Technology Officer",
