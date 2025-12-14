@@ -20,7 +20,7 @@ const teamMembers = [
     name: "Olalekan",
     role: "Founder & CEO",
     image: "/Ola.jpg",
-    description:
+    description: ,
      fullBio: `
       <p>Olalekan is the visionary founder of SimpliP2P, Nigeria's innovative eProcurement solution transforming how businesses manage sourcing and supplier engagement. With over a decade of hands-on experience across global organizations, Olalekan possesses deep, end-to-end knowledge of procurement and supply chain data management from a technical and operational standpoint.</p>
       <p>As a certified SAP Master Data Governance (MDG) specialist, he has led complex data migration, governance, and system integration initiatives—bridging procurement strategy with data-driven execution. His career spans major implementations involving S/4HANA, ECC, Oracle EBS, and Dynamics 365, where he engineered master data frameworks across P2P lifecycles, ensuring compliance, integrity, and business efficiency.</p>
