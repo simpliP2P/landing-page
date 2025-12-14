@@ -60,7 +60,7 @@ const teamMembers = [
     role: "Chief Technology Officer",
     image: "/Anjola.jpg",
     description:
-      "Anjola leads the technology strategy for SimpliP2P, architecting scalable procurement solutions that optimize user workflows while ensuring robust functionality for vendor management, sourcing, and compliance.",
+      "Anjola leads the technology strategy for SimpliP2P, architecting scalable procurement solutions that optimize user workflows while ensuring robust functionality for vendor management, sourcing, and compliance .",
     fullBio: `
       <p>As Chief Technology Officer at SimpliP2P, Anjola drives the strategic vision and technical development of our procurement platform. He excels at designing scalable systems that meet the complex needs of procurement teams while delivering secure and efficient digital solutions.</p>
       <p>Anjola oversees platform architecture, engineering execution, and technical innovation, ensuring that every feature is reliable, performant, and aligned with business goals. He collaborates closely with product and business teams to translate customer needs into high-quality, future-proof technology solutions.</p>
