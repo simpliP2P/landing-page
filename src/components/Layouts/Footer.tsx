@@ -33,6 +33,7 @@ const Footer = () => {
   const company = [
     { name: "About Us", href: "/about" },
     { name: "Book A Demo", href: "/book-a-demo" },
+    { name: "Blog", path: "/blog" }
   ];
 
   return (
